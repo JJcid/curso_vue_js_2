@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
-    <title>Ganchos de ciclo de vida</title>
+    <title>Primera aplicación</title>
 </head>
 <body>
     <div id="vue">
-        <h3><span>{{ mensaje }}</h3>
+        <h3>{{ mensaje }}</h3>
+        <button v-on:click="mensaje = 'Este es el nuevo mensaje'">Cambiar mensaje</button>
+        <button v-on:click="destruir">Destruir instancia</button>
     </div>
     <script src="vue.js"></script>
 </body>

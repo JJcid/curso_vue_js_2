@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+    <title>Primera aplicación</title>
+</head>
+<body>
+    <div id="vue">
+        <button v-on:click = "primero+=1">Incrementar el primero</button>
+        <button v-on:click = "segundo+=1">Incrementar el segundo</button>
+        <button v-on:click = "tercero+=1">Incrementar el tercero</button>
+        <button v-on:click = "cuarto+=1">Incrementar el cuarto</button>
+        <p>Primero: {{ primero }} </p>
+        <p>Segundo: {{ segundo }} </p>
+        <p>Tercero: {{ tercero }} </p>
+        <p>Cuarto: {{ cuarto }} </p>
+        <p>Total: {{ total }} </p>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>

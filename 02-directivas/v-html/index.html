@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue"></script>
-    <title>Primera aplicación</title>
+    <title>Ganchos de ciclo de vida</title>
 </head>
 <body>
     <div id="vue">
-        <h3>{{ mensaje }}</h3>
-        <button v-on:click="mensaje = 'Este es el nuevo mensaje'">Cambiar mensaje</button>
-        <button v-on:click="destruir">Destruir instancia</button>
+       <div v-html="texto"></div>
     </div>
     <script src="vue.js"></script>
 </body>

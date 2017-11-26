@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    <title>v-for</title>
+</head>
+<body>
+    <div id="vue">
+        <ul><!-- se puede utilizar el ciclo for o in indistintamente -->
+            <li v-for='(pais, indice) of paises'>{{ indice + 1 }} - {{ pais }}</li>
+        </ul>
+        <ul>
+            <li v-for='nombre in nombres'>{{ nombre.nombre }}</li>
+        </ul>
+        <ul>
+            <template v-for="pais of paises">
+                <li>{{ pais }}</li>
+                <hr/>
+            </template>
+        </ul>
+        <ul>
+            <li v-for="(valor, key) of empleado">
+                {{ key }} -> {{ valor }}
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>

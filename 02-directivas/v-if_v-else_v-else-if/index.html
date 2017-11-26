@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    <title>V-if, v-else, v-else-if</title>
+</head>
+<body>
+    <div id="vue">
+       <template v-if='parrafo == 1'>
+        <h3>Template</h3>
+        <p>Con la etiqueta template podemos estructurar paquetes de 
+           html con varias etiquetas sin que el padre "template" aparezca
+           en nuestro código. De esta manera podemos seleccionar un grupo
+           o conjunto de estructuras html y mostrarla, ocultarla y manipularla 
+           sin que pueda ser visible para el usuario.
+        </p>
+       </template>
+       <div v-else-if='parrafo == 2'>se muestra en un v-else-if</div>
+       <div v-else-if='parrafo == 3'>se muestra en un v-else-if</div>
+       <div v-else> se muestra en un v-else</div>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>

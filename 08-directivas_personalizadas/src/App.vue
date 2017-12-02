@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="jumbotron">
-      <span v-decorar:grande.bold.italic="'times new roman'">Aprende Vue.js</span>
+      <span v-decorar:grande.bold.italic="{familia: 'times new roman', color: 'red'}">Aprende Vue.js</span>
     </div>
   </div>
 </template>

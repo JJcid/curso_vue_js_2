@@ -10,11 +10,13 @@
 </template>
 
 <script>
+import { bus } from './main.js';
   export default {
     props: ['tareas'],
     methods: {
       borrar(indice){
         this.tareas.splice(indice,1);
+        bus.$emit('actualizarContador',this.tareas.length);
       }
     }
   }

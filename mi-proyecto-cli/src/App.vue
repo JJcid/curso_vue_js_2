@@ -2,7 +2,10 @@
   <div id="app" class="container">
     <div class="jumbotron">
       <titulo :titulo="titulo"></titulo>
-      <nueva-tarea :tareas="tareas"></nueva-tarea>
+      <nueva-tarea :tareas="tareas"
+                   :actualizarContador="actualizarContador"
+      >
+      </nueva-tarea>
       <lista-tareas :tareas="tareas"></lista-tareas>
     </div>
   </div>
@@ -43,6 +46,11 @@ export default {
             finalizada: false
         }
       ]
+    }
+  },
+  methods: {
+    actualizarContador() {
+      this.numTareas += 1;
     }
   }
 }

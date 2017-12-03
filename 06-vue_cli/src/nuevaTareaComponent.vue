@@ -33,6 +33,12 @@
           bus.actualizarContador(this.tareas.length);
         }
         this.nuevaTarea = ''
+        this.$http.post('tareas.json',{
+          texto: texto,
+          finalizada: false
+        }).then(respuesta => {
+          console.log(respuesta)
+          })
       }
     },
     created(){

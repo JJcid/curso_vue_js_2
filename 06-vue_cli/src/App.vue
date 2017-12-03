@@ -24,35 +24,30 @@ export default {
   data(){
     return {
       titulo: 'Mi Lista de tareas',
-      tareas: [
-        {
-            texto: 'Aprender Vue.js',
-            finalizada: false
-        },
-        {
-            texto: 'Aprender Angular 5',
-            finalizada: false
-        },
-        {
-            texto: 'Aprender Sass',
-            finalizada: false
-        },
-        {
-            texto: 'Aprender Ionic 3',
-            finalizada: false
-        },
-        {
-            texto: 'Aprender Bootstrap',
-            finalizada: false
-        }
-      ]
+      tareas: []
     }
   },
   methods: {
     actualizarContador() {
       this.numTareas += 1;
     }
-  }
+  },
+  created(){
+      this.$http.get('tareas.json')
+                .then(respuesta => {
+                  return respuesta.json();
+                }).then(respuestaJson => {
+                    for(let id in respuestaJson){
+                      let tarea = {
+                        id: id,
+                        texto: respuestaJson[id].texto,
+                        finalizada: respuestaJson[id].finalizada
+                      }
+                      this.tareas.push(tarea);
+                      this.numTareas += 1;
+                  }
+                });
+    }
 }
 </script>
 
